@@ -1,8 +1,8 @@
 package logging
 
 import (
-	"autograph-backend-controller/config"
-	"autograph-backend-controller/utils"
+	"autograph-backend-search/config"
+	"autograph-backend-search/utils"
 	"errors"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
