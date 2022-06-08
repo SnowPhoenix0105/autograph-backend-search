@@ -28,6 +28,8 @@ func New(config *Config) *Server {
 
 	eng.GET("/test/coffee", coffeeHandler)
 	eng.GET("/search", handler.Search)
+	eng.GET("/version", handler.GetVersion)
+	eng.GET("/set-version", handler.SetVersion)
 	eng.GET("/download", handler.Download)
 
 	// 需要登录的路由

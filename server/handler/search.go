@@ -61,7 +61,7 @@ func (h *searchHandler) checkParam() error {
 	}
 
 	h.query = unescaped
-	h.version = 13
+	h.version = currentVersion
 
 	logging.Default().Infof("query=%#v, version=%d", h.query, h.version)
 
@@ -183,7 +183,7 @@ func (h *searchHandler) produce() (*searchResp, error) {
 		if skips[i] {
 			continue
 		}
-		
+
 		if err := h.produceCypher(cypher); err != nil {
 			return nil, utils.WrapErrorf(err, "produce cypher [%d] fail", i)
 		}
